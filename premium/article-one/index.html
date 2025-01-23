@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/JAMSite/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=JAMSite/livereload" data-no-instant defer></script>
+		
+		
+		
+		<meta property="og:url" content="http://localhost:1313/JAMSite/premium/article-one/">
+  <meta property="og:site_name" content="JamSite">
+  <meta property="og:title" content="Article One">
+  <meta property="og:description" content="Article One">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="premium">
+    <meta property="article:published_time" content="2025-01-23T09:11:16+01:00">
+    <meta property="article:modified_time" content="2025-01-23T09:11:16+01:00">
+
+	
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Article One &middot; JamSite</title>
+
+		
+		<link rel="stylesheet" href="/JAMSite/css/style.css">
+		<link rel="stylesheet" href="/JAMSite/css/fonts.css">
+		
+		<link rel="icon" href="/JAMSite/favicon.ico"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/JAMSite/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/JAMSite/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/JAMSite/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="JamSite" />
+
+		<script src="/JAMSite/js/darkmode.js"></script>
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">JamSite</h2>
+					
+				</a>
+				
+<style media="screen">
+
+    .nav {
+      overflow: visible;
+      padding: 0.1rem;
+    }
+
+    #search {
+      float: right;
+      position: relavive;
+      bottom: 0.2rem;
+      padding: 0.5rem 1rem;
+      width: 15rem;
+      border: 1px solid lightgrey;
+    }
+
+    #search-results {
+      position: absolute;
+      background: white;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.35);
+      right: 0;
+    }
+
+    #search-results a {
+      display: block;
+      border-bottom: 1px solid lightgray;
+      width: 12rem;
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+
+    #search-results a:hover {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    #search-results.hide {
+      display: none;
+    }
+
+</style>
+
+<input type="text" id="search" placeholder="Search">
+<div id="search-results" class="hide"></div>
+
+
+ <script src="https://unpkg.com/lunr/lunr.js"></script>
+ <script>
+
+   const search = document.getElementById('search')
+   const results = document.getElementById('search-results')
+
+   
+   search.addEventListener( 'focus', e => {
+     results.classList.remove('hide')
+   })
+   search.addEventListener( 'blur', e => {
+     setTimeout( () => {
+       results.classList.add('hide')
+     }, 100)
+   })
+
+  
+  search.addEventListener( 'keyup', function() {
+
+    results.innerHTML = ''
+    if( !this.value ) return
+
+    
+    let lunrResults = window.idx.search( this.value )
+
+    lunrResults.forEach( page => {
+
+      
+      let pageMeta = page.ref.split('||')
+      let pageLink = document.createElement('a')
+      pageLink.innerText = pageMeta[0]
+      pageLink.href = pageMeta[1]
+      results.appendChild( pageLink )
+    })
+  })
+
+  
+  fetch( "http://localhost:1313/JAMSite/" + 'index.json' ).then( res => {
+
+    
+    res.json().then( searchIndex => {
+
+      
+      window.idx = lunr(function () {
+
+        
+        this.ref('meta')
+        this.field('title')
+        this.field('content')
+
+        searchIndex.forEach( page => this.add(page) )
+      })
+
+    })
+  })
+
+ </script>
+
+			</div>
+		</nav>
+
+        <div id="darkModeToggle" onclick="toggleDarkMode()">
+  &#9680; 
+</div>
+
+        
+
+<style media="screen">
+
+  #signin {
+    background: #DEDEDE;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+  #signin input, #signin button {
+    display: block;
+    padding: 0,5rem 1rem;
+    width: 100%;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+  }
+
+  #signin button {
+    background: dodgerblue;
+    color: white;
+  }
+
+</style>
+
+<main>
+
+  <div class="post">
+
+		<div class="post-info">
+    <span>Written by</span>
+        bts7711
+        <br>
+        <span>on&nbsp;</span><time datetime="2025-01-23 09:11:16 &#43;0100 CET">January 23, 2025</time>
+</div>
+
+		<h1 class="post-title">Article One</h1>
+<div class="post-line"></div>
+
+		
+
+    <div class="premium-content">
+
+      <h2 style="text-align:center;">Sign in to view premium content</h2>
+      <form id="signin">
+        <input type="text" name="username" placeholder="username" value="">
+        <input type="password" name="password" placeholder="password" value="">
+        <button type="submit" name="button">Sign In</button>
+      </form>
+
+    </div>
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/JAMSite/second-page/" class="left arrow">&#8592;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+<script>
+
+  
+  const cfURL = 'https://us-central1-peaceful-leaf-448708-q8.cloudfunctions.net/premium-content-loader'
+
+  
+  document.getElementById('signin').addEventListener( 'submit', function(e) {
+
+    
+    e.preventDefault()
+
+    
+    let username = this.querySelector('[name="username"]').value
+    let password = this.querySelector('[name="password"]').value
+
+    
+    fetch( `${cfURL}?username=${username}&password=${password}`).then( res => {
+
+      
+      if(res.ok) {
+        res.text().then ( content => {
+
+          this.innerHTML = content
+        })
+      }
+    })
+
+  })
+
+</script>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2025-01-23 13:51:01.8091681 &#43;0100 CET m=&#43;0.237941701">2025</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

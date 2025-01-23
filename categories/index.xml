@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on JamSite</title>
+    <link>https://bts7711.github.io/JAMSite/categories/</link>
+    <description>Recent content in Categories on JamSite</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Norman Bates 2025</copyright>
+    <atom:link href="https://bts7711.github.io/JAMSite/categories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
