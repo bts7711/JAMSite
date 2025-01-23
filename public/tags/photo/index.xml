@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Photo on JamSite</title>
+    <link>http://localhost:1313/tags/photo/</link>
+    <description>Recent content in Photo on JamSite</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Norman Bates 2025</copyright>
+    <lastBuildDate>Mon, 20 Jan 2025 09:49:10 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/photo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Dog</title>
+      <link>http://localhost:1313/photos/hugo-dog/</link>
+      <pubDate>Mon, 20 Jan 2025 09:49:10 +0100</pubDate>
+      <guid>http://localhost:1313/photos/hugo-dog/</guid>
+      <description>&lt;h2 id=&#34;hugo-the-dog&#34;&gt;HUGO the Dog&lt;/h2&gt;&#xA;&lt;p&gt;Lorem ipsum&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/hugo-the-dog.jpg&#34; alt=&#34;HUGO the dog&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;sdfasdfasdfdffadf&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
