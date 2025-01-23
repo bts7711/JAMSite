@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-    - name: Checkout
-      uses: actions/checkout@v4.2.2
+    - uses: actions/checkout@v2
     - name: Hugo setup
       # You may pin to the exact commit or the version.
       # uses: peaceiris/actions-hugo@75d2e84710de30f6ff7268e08f310b60ef14033f
