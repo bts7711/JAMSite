@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://bts7711.github.io/JAMSite/'
 languageCode = 'en-us'
 title = 'JamSite'
 theme = 'tale'
